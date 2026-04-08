@@ -7,7 +7,7 @@ filesure/
 |
 ├── python_ingestion/
 │   └── ingest.py                  # Part 1 — Python data cleaning + MongoDB ingestion
-    └── company_records.csv        # Sample data (80 records, intentionally messy)
+    └── company_records.csv        # Sample data (80 records)
 ├── backend/
 │   ├── server.js                  # Part 2 — Express API entry point
 │   ├── routes.js                  # API route handlers
@@ -46,7 +46,7 @@ ingest.py
 **Expected output:**
 ```
 ✅ Ingestion Output: Connected to MongoDB
-Read 80 rows from: C:\Users\afras\OneDrive\Desktop\ASSIGNMENT_TECH_SUPPORT\python_ingestion\company_records.csv
+Read 80 rows 
 Cleaned 80 documents
 Inserted 80 documents into MongoDB
 
@@ -100,6 +100,7 @@ Frontend running on http://localhost:5173/
 
 **GET /companies?status=Active&state=Maharashtra&page=1&limit=5**
 **GET http://localhost:5000/companies?status=Active&state=Maharashtra&page=1&limit=5**
+
 ```json
 {
   "success": true,
