@@ -45,7 +45,7 @@ ingest.py
 ```
 
 **Expected output:**
-```
+```json
 ✅ Ingestion Output: Connected to MongoDB
 Read 80 rows 
 Cleaned 80 documents
@@ -68,23 +68,23 @@ Ingestion Summary:
 
 ### Step 2 — Start API (Part 2)
 
-```
+```json
 cd backend
 npm install
 node server.js
 ```
 
 **Expected output:**
-```
+```json
 ✅ MongoDB Connected: localhost
 🚀 FileSure API running on http://localhost:5000
 ```
 
 ### Step 3 — Open Frontend (Part 3)
-
+```json
 npm run dev
 Frontend running on http://localhost:5173/
-
+```
 ---
 
 ## API Endpoints
