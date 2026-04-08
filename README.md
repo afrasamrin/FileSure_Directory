@@ -61,11 +61,7 @@ Ingestion Summary:
    Missing director 1      : 0
    Missing director 2      : 14
    Capital = 0 (missing)   : 0
-<<<<<<< HEAD
-   Missing incorporation   : 22
-=======
    Missing incorporation   : 0
->>>>>>> 7ac448d53670d27160f6f5ad5e2a7c86de5714d3
    Missing filing date     : 11
    Invalid emails          : 8
 ```
@@ -104,12 +100,7 @@ Frontend running on http://localhost:5173/
 
 ### Example Responses
 ```json
-<<<<<<< HEAD
-**GET /companies?status=Active&state=Maharashtra&page=1&limit=5**
-**GET http://localhost:5000/companies?status=Active&state=Maharashtra&page=1&limit=5**
-=======
 **GET /companies?status=Active&state=Maharashtra&page=1&limit=10
->>>>>>> 7ac448d53670d27160f6f5ad5e2a7c86de5714d3
 
 
 {
@@ -118,22 +109,13 @@ Frontend running on http://localhost:5173/
   "pagination": {
     "total": 5,
     "page": 1,
-<<<<<<< HEAD
-    "limit": 5,
-=======
     "limit": 10,
->>>>>>> 7ac448d53670d27160f6f5ad5e2a7c86de5714d3
     "totalPages": 1
   }
 }
  
 
-<<<<<<< HEAD
-**GET /companies/summary**
-**http://localhost:5000/companies/summary**
-=======
 **GET /companies/summary** 
->>>>>>> 7ac448d53670d27160f6f5ad5e2a7c86de5714d3
  
 {
     "success": true,
