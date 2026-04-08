@@ -1,0 +1,157 @@
+/* Core Layout */
+.dashboard-container { 
+  background: #f8fafc;
+  color: #1e293b;
+}
+
+.main-header {
+  background: #1e40af;
+  color: white;
+  padding: 1rem 2rem;
+  display: flex;
+  align-items: baseline;
+  gap: 15px;
+}
+
+.subtitle { font-size: 0.8rem; opacity: 0.7; }
+.content { max-width: 1200px; margin: 0 auto; padding: 2rem; }
+
+/* Cards */
+.summary-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.card {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+  text-align: center;
+}
+
+.card .number { font-size: 1.8rem; font-weight: 800; color: #1e40af; }
+.highlight-red .number { color: #dc2626; }
+.card .label { font-size: 0.75rem; color: #64748b; text-transform: uppercase; margin-top: 5px; }
+
+/* Filters */
+.filters-panel {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 12px;
+  display: flex;
+  gap: 1rem;
+  align-items: flex-end;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.filter-group { display: flex; flex-direction: column; gap: 5px; }
+.filter-group label { font-size: 0.7rem; font-weight: 700; color: #64748b; }
+
+select {
+  padding: 8px;
+  border: 1px solid #e2e8f0;
+  border-radius: 6px;
+  min-width: 140px;
+}
+
+.btn-primary {
+  background: #1e40af;
+  color: white;
+  border: none;
+  padding: 9px 24px;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s ease;  
+}
+ 
+.btn-primary:hover {
+  background: hsl(223, 25%, 80%);  
+  color: black;
+}
+
+.table-wrapper {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+  
+  /* --- THE DUAL SCROLL FIX --- */
+  height: 600px;        /* Fixed height for vertical scroll */
+  overflow: auto;       /* Enables both horizontal AND vertical scrolling */
+  position: relative;
+}
+
+table { 
+  width: 100%;          /* This allows the table to stretch */
+  min-width: 1000px;    /* Force horizontal scroll by making table wider than wrapper */
+  border-collapse: collapse; 
+  font-size: 0.85rem; 
+}
+
+/* --- THE STICKY HEADER --- */
+th { 
+  position: sticky;
+  top: 0;               /* Pins header to the top during vertical scroll */
+  z-index: 10;
+  background: #f1f5f9; 
+  padding: 1rem; 
+  text-align: left; 
+  color: #475569; 
+  white-space: nowrap;  /* Prevents headers from wrapping to new lines */
+}
+
+td {
+  padding: 1rem;
+  border-top: 1px solid #f1f5f9;
+  white-space: nowrap;  /* Prevents data (like long names) from wrapping */
+}
+
+/* Table */
+/* .table-wrapper {
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+
+table { width: 100%; border-collapse: collapse; font-size: 0.85rem; }
+th { background: #f1f5f9; padding: 1rem; text-align: left; color: #475569; }
+td { padding: 1rem; border-top: 1px solid #f1f5f9; } */
+
+/* Badges */
+.badge {
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 0.7rem;
+  font-weight: 700;
+}
+
+.badge-active { background: #dcfce7; color: #16a34a; }
+.badge-strike-off { background: #fee2e2; color: #dc2626; }
+
+/* Pagination */
+.pagination {
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #f8fafc;
+  border-top: 1px solid #e2e8f0;
+}
+
+.page-controls button {
+  padding: 6px 12px;
+  margin-left: 8px;
+  border: 1px solid #cbd5e1;
+  background: white;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.page-controls button:disabled { opacity: 0.5; cursor: not-allowed; }
+
+.email-invalid { color: #dc2626; font-weight: 600; }
