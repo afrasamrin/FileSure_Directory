@@ -88,7 +88,7 @@ Frontend running on http://localhost:5173/
 ---
 
 ## API Endpoints
-
+```json
 🚀 FileSure API running on http://localhost:5000
 📋 Endpoints:
    GET /health
@@ -96,13 +96,14 @@ Frontend running on http://localhost:5173/
    GET /companies?status=Active&state=Maharashtra
    GET /companies/summary
    GET /companies/:id
+```
 
 ### Example Responses
-
+```json
 **GET /companies?status=Active&state=Maharashtra&page=1&limit=5**
 **GET http://localhost:5000/companies?status=Active&state=Maharashtra&page=1&limit=5**
 
-```json
+
 {
   "success": true,
   "data": [...],
@@ -113,11 +114,11 @@ Frontend running on http://localhost:5173/
     "totalPages": 1
   }
 }
-```
+ 
 
 **GET /companies/summary**
 **http://localhost:5000/companies/summary**
-```json
+ 
 {
     "success": true,
     "data": {
