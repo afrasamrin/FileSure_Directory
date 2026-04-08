@@ -24,6 +24,7 @@ filesure/
 ---
 
 ## Prerequisites 
+```json
 - Node.js  
 - Python  
 - MongoDB running locally    
@@ -36,7 +37,7 @@ filesure/
 
 ### Step 1 — Python Ingestion (Part 1)
 
-``` 
+```json
 pip install pymongo pandas
 
 cd python_ingestion
