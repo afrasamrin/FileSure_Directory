@@ -79,11 +79,12 @@ app.use((err, req, res, next) => {
 // In your startServer function:
 const startServer = async () => {
   try {
+    
     await connectDb();
     
     // Run ingestion on every server restart
     await runIngestion(); 
-
+    await createCompanyIndexes();
     app.listen(PORT, () => {
     console.log(`🚀 FileSure API running on http://localhost:${PORT}`);
     console.log(`📋 Endpoints:`);

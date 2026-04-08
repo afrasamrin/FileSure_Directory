@@ -48,10 +48,10 @@ def normalize_date(date_str):
       YYYY/MM/DD  (e.g. 2019/03/15)
     Returns DD-MM-YYYY string, or "Unknown" if blank/invalid.
     """
-    if pd.isna(date_str) or str(date_str).strip() == "":
-        return "Unknown"
     date_str = str(date_str).strip().replace('/', '-')
-    formats = ["%d-%m-%Y", "%Y/%m/%d"]
+    if pd.isna(date_str) or str(date_str).strip() == "":
+        return "Unknown" 
+    formats = ["%d-%m-%Y", "%m-%d-%Y", "%Y-%m-%d"]
     for fmt in formats:
         try:
             return datetime.strptime(date_str, fmt).strftime("%d-%m-%Y")
@@ -161,6 +161,7 @@ except Exception as e:
 # ─────────────────────────────────────────────
 documents = []
 
+ 
 for idx, row in df.iterrows():
     try:
         cin = str(row.get("cin", "")).strip()
