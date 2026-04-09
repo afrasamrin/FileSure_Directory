@@ -83,8 +83,7 @@ const startServer = async () => {
     await connectDb();
     
     // Run ingestion on every server restart
-    await runIngestion(); 
-    await createCompanyIndexes();
+    await runIngestion();  
     app.listen(PORT, () => {
     console.log(`🚀 FileSure API running on http://localhost:${PORT}`);
     console.log(`📋 Endpoints:`);
